@@ -27,34 +27,31 @@ const sidebars = {
   //   },
   // ],
   ['Architecture']: [
-    // 'intro',
-      '100 Questions/Content',
-      // 'Architecture/Без состояния',
-      // 'Architecture/Introduction',
-      // 'Architecture/Единственное хранилище',
-      // 'Architecture/Интерактивные хранилища',
-      // 'Architecture/Реактивные хранилища',
-      // 'Architecture/Реактивные хранилища с EDA',
-      // '100 Questions/Introduction'
-    // {
-    //   type: 'category',
-    //   label: 'Architecture',
-    //   items: ['Architecture/Взаимодействие/Без состояния',
-    //     'Architecture/Взаимодействие/Вступление',
-    //     'Architecture/Взаимодействие/Единственное хранилище',
-    //     'Architecture/Взаимодействие/Интерактивные хранилища',
-    //     'Architecture/Взаимодействие/Реактивные хранилища',
-    //     'Architecture/Взаимодействие/Реактивные хранилища с EDA',
-    //   ],
-    // },
+    'intro',
+    {
+      type: 'category',
+      label: 'Architecture',
+      items: [
+        'Architecture/Introduction',
+        'Architecture/Without state/Без состояния',
+        'Architecture/Единственное хранилище',
+        'Architecture/Интерактивные хранилища',
+        'Architecture/Реактивные хранилища',
+        'Architecture/Реактивные хранилища с EDA',
+      ],
+    },
   ],
   ['100QuestionsSidebar']: [
+    '100 Questions/Intro',
     '100 Questions/Content',
-    '100 Questions/Introduction',
     {
       type: 'category',
       label: '100 Questions',
-      items: ['100 Questions/Content', '100 Questions/Introduction','100 Questions/Introduction',],
+      items: [
+        '100 Questions/Content',
+        '100 Questions/Content',
+        '100 Questions/Content',
+      ],
     },
   ],
 };
