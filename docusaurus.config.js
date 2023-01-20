@@ -6,6 +6,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  plugins: [
+    '@easyops-cn/docusaurus-search-local',
+    // '@cmfcmf/docusaurus-search-local',
+    // '@aldridged/docusaurus-plugin-lunr'
+  ],
   title: "Triton's things",
   tagline: 'Architecture and programming',
   url: 'https://your-docusaurus-test-site.com',
@@ -23,8 +28,17 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ru',
+    locales: ['en', 'ru'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      // You can omit a locale (e.g. fr) if you don't need to override the defaults
+      ru: {
+        label: 'Русский',
+      },
+    },
   },
 
   presets: [
@@ -87,6 +101,10 @@ const config = {
           //   label: 'GitHub',
           //   position: 'right',
           // },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          }
         ],
       },
       footer: {
