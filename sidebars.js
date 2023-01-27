@@ -56,10 +56,10 @@ const sidebars = {
   ],
   ['Other']: [
     'Other/intro',
-    // 'Other/What to prepare for an interview?',
     'Other/Which computer to choose for learning programming',
-    'Other/Conventions',
+    'Other/Project conventions',
     'Other/Tips for a newbie in IT',
+    'Other/What to prepare for an interview'
   ],
 };
 

@@ -4,6 +4,7 @@ import styles from "./MainBlock.module.css";
 
 const MainBlock = () => (
     <div className={styles.main}>
+        
         <h3>О ресурсе</h3>
         <p>
             Привет! Я front-end инженер. В этом блоге я собрал все свои статьи на различные темы.

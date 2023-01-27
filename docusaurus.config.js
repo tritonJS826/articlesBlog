@@ -71,7 +71,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Triton's things",
+        title: "Main",
         logo: {
           alt: 'Logo',
           src: 'img/logo.png',
@@ -126,19 +126,19 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Info',
             items: [
+              // {
+              //   label: 'github (add link)',
+              //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              // },
+              // {
+              //   label: 'linkedin (add link)',
+              //   href: 'https://discordapp.com/invite/docusaurus',
+              // },
               {
-                label: 'github (add link)',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'linkedin (add link)',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'CV (add link)',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'CV',
+                href: 'https://drive.google.com/file/d/1dhTnI04ZJCS7POMlp6y-LVpnEZzk3Sb0/view?usp=sharing',
               },
             ],
           },
@@ -146,12 +146,16 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog(add link)',
-                to: '/blog',
+                label: 'LinkedIn',
+                to: 'https://www.linkedin.com/in/victor-veretennikov',
               },
               {
-                label: 'GitHub(add link)',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'GitHubs',
+                href: 'https://github.com/tritonJS826',
+              },
+              {
+                label: 'Youtube',
+                href: 'https://www.youtube.com/channel/UCj7CJbhML-1VR2Aywqt7zSg',
               },
             ],
           },
