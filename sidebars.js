@@ -54,6 +54,10 @@ const sidebars = {
       ],
     },
   ],
+  ['Other']: [
+    'Other/intro',
+    'Other/Что готовить к интервью',
+  ],
 };
 
 module.exports = sidebars;

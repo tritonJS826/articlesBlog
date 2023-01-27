@@ -89,6 +89,12 @@ const config = {
             position: 'left',
             label: '100 Questions',
           },
+          {
+            type: 'doc',
+            docId: 'Other/intro',
+            position: 'left',
+            label: 'Other',
+          },
           // {
           //   type: 'doc',
           //   docId: '/category/front-end-architecture',
