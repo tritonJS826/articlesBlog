@@ -59,7 +59,8 @@ const sidebars = {
     'Other/Which computer to choose for learning programming',
     'Other/Project conventions',
     'Other/Tips for a newbie in IT',
-    'Other/What to prepare for an interview'
+    'Other/What to prepare for an interview',
+    'Other/lifeCheating/Life-cheating'
   ],
 };
 
