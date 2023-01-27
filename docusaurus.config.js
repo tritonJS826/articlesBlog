@@ -117,38 +117,8 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Programming',
+            title: 'Resources',
             items: [
-              // {
-              //   label: 'Architecture',
-              //   to: '/docs/testDocument/testDoc1.md',
-              // },
-            ],
-          },
-          {
-            title: 'Info',
-            items: [
-              // {
-              //   label: 'github (add link)',
-              //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              // },
-              // {
-              //   label: 'linkedin (add link)',
-              //   href: 'https://discordapp.com/invite/docusaurus',
-              // },
-              {
-                label: 'CV',
-                href: 'https://drive.google.com/file/d/1dhTnI04ZJCS7POMlp6y-LVpnEZzk3Sb0/view?usp=sharing',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'LinkedIn',
-                to: 'https://www.linkedin.com/in/victor-veretennikov',
-              },
               {
                 label: 'GitHubs',
                 href: 'https://github.com/tritonJS826',
@@ -156,6 +126,28 @@ const config = {
               {
                 label: 'Youtube',
                 href: 'https://www.youtube.com/channel/UCj7CJbhML-1VR2Aywqt7zSg',
+              },
+            ],
+          },
+          {
+            title: 'Info',
+            items: [
+              {
+                label: 'CV',
+                href: 'https://drive.google.com/file/d/1dhTnI04ZJCS7POMlp6y-LVpnEZzk3Sb0/view?usp=sharing',
+              },
+            ],
+          },
+          {
+            title: 'Contacts',
+            items: [
+              {
+                label: 'LinkedIn',
+                to: 'https://www.linkedin.com/in/victor-veretennikov',
+              },
+              {
+                label: 'victorveretennikov58@gmail.com',
+                href: 'mailto:victorveretennikov58@gmail.com',
               },
             ],
           },
