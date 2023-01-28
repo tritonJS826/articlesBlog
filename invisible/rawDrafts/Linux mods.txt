@@ -1,0 +1,9 @@
+debian (stable) -> ubuntu (SUPER POPULAR) -> xubuntu, linux mint - performance
+debian -> antiX (legacy hardware)
+ARCH LINIX (newest packages/software) -> manjaro
+
+
+Easy to use
+1. ubuntu/xubuntu/linux mint
+2. anti X
+3. monharo
