@@ -33,7 +33,7 @@ const sidebars = {
       label: 'Architecture',
       items: [
         'Architecture/Introduction',
-        'Architecture/Without state/Без состояния',
+        'Architecture/stateless/stateless',
         'Architecture/Единственное хранилище',
         'Architecture/Интерактивные хранилища',
         'Architecture/Реактивные хранилища',
