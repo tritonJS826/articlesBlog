@@ -65,6 +65,7 @@ const sidebars = {
     'Other/OSComparison',
     'Other/lifeCheating/Life-cheating',
     'Other/BashUtils',
+    'Other/how-to-become-frontend-engineer-lessons-plan',
   ],
 };
 
