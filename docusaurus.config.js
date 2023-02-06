@@ -79,7 +79,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'Architecture/Introduction',
+            docId: 'Architecture/data-interaction/introduction',
             position: 'left',
             label: 'Front-end architecture',
           },
