@@ -71,7 +71,7 @@
 * **sort**
   sort output
 
-* **split*
+* **split**
   split large files onto smallest
 
 * **touch**
@@ -83,7 +83,7 @@
 * **wc**
   cont words, lines, symbols
 
-* **whois
+* **whois**
   info about ownership of domain and owner
 
 ## CLI proggrams 
@@ -153,6 +153,9 @@
 
 * **nvidia-smi**
   nvidia gpu info
+
+* **pnpm**
+fastest node package manager for multiple projects
 
 * **prime-select**
   switch between audiocards

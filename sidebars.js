@@ -63,7 +63,8 @@ const sidebars = {
     'Other/KitchenCooperation',
     'Other/MyLinuxTools',
     'Other/OSComparison',
-    'Other/lifeCheating/Life-cheating'
+    'Other/lifeCheating/Life-cheating',
+    'Other/BashUtils',
   ],
 };
 
