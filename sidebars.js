@@ -66,6 +66,14 @@ const sidebars = {
     'Other/lifeCheating/Life-cheating',
     'Other/BashUtils',
     'Other/how-to-become-frontend-engineer-lessons-plan',
+    {
+      type: 'category',
+      label: 'configs',
+      items: [
+        'Other/i3-config',
+        'Other/i3statusbar-config',
+      ],
+    }
   ],
 };
 
