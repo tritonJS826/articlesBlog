@@ -68,6 +68,7 @@ const sidebars = {
         'Other/configs/ququmber-vscode',
       ],
     },
+    'Other/backup-user/backup-user',
     'Other/WhichComputerToChooseForLearningProgramming',
     'Other/ProjectConventions',
     'Other/TipsForANewbieInIT',

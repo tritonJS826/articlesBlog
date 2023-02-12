@@ -1,4 +1,4 @@
-# Vscode дебаг chrome
+# Vs code: дебаг chrome
 
 
 launch.json: 

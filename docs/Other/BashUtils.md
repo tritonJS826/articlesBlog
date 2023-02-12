@@ -191,7 +191,7 @@ sudo dd if=path/iso-file.iso of=/dev/sdd bs=1M status=progress
 
 * create compressed disk image
 ``` 
-dd if=/dec/sda | gzip -9 > /mnt/external/filename.img.gz
+dd if=/dev/sda | gzip -9 > /mnt/external/filename.img.gz
 ```
 
 * extract compressed disk image

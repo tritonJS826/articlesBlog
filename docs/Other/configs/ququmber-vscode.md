@@ -1,4 +1,4 @@
-# Ququmber для vscode
+# Vs code: ququmber autocomplete
 
 settings.json:
 
