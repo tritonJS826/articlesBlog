@@ -1,4 +1,4 @@
-# i3 wm
+# i3 wm config
 
 Не секрет, что я использую для работы xubuntu и оконный менеджер [i3](https://i3wm.org/). Основное что он позволяет сделать - оптимизировать работу для тех, кто использует keyboard-firs подход (по сути - меньше пользоваться мышью, по крайней мере для переключения между программами, группами программ). В интернете достаточно инструкций, но вот для примера мой конфигурационный файл (~/.config/i3/config):
 
@@ -234,3 +234,5 @@ bindsym $mod+x move workspace to output right
 # open txt file with help bash commands
 bindsym $mod+n exec --no-startup-id kitty vim /home/triton/repositories/articlesBlog/docs/Other/BashUtils.md
 ```
+
+2023-02-11

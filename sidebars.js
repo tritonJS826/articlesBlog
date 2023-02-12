@@ -56,6 +56,18 @@ const sidebars = {
   ],
   ['Other']: [
     'Other/intro',
+    {
+      type: 'category',
+      label: 'Конфиги',
+      items: [
+        'Other/configs/content',
+        'Other/configs/eslint',
+        'Other/configs/i3-config',
+        'Other/configs/i3statusbar-config',
+        'Other/configs/launch',
+        'Other/configs/ququmber-vscode',
+      ],
+    },
     'Other/WhichComputerToChooseForLearningProgramming',
     'Other/ProjectConventions',
     'Other/TipsForANewbieInIT',
@@ -66,14 +78,6 @@ const sidebars = {
     'Other/lifeCheating/Life-cheating',
     'Other/BashUtils',
     'Other/how-to-become-frontend-engineer-lessons-plan',
-    {
-      type: 'category',
-      label: 'configs',
-      items: [
-        'Other/i3-config',
-        'Other/i3statusbar-config',
-      ],
-    }
   ],
 };
 
