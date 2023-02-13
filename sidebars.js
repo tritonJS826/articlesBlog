@@ -80,6 +80,9 @@ const sidebars = {
     'Other/BashUtils',
     'Other/how-to-become-frontend-engineer-lessons-plan',
   ],
+  ['Certificates']: [
+    'Certificates/certificates',
+  ],
 };
 
 module.exports = sidebars;

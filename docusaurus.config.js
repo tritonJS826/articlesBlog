@@ -95,6 +95,12 @@ const config = {
             position: 'left',
             label: 'Other',
           },
+          {
+            type: 'doc',
+            docId: 'Certificates/certificates',
+            position: 'left',
+            label: 'Certificates',
+          },
           // {
           //   type: 'doc',
           //   docId: '/category/front-end-architecture',
