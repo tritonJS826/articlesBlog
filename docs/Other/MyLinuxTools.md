@@ -282,6 +282,9 @@ fastest node package manager for multiple projects
 * **slack**
   messenger
 
+* **stacer**
+  system monitoring
+
 * **telegram**
   messenger
 
