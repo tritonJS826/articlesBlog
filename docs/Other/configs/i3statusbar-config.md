@@ -48,11 +48,11 @@ disk "/" {
   low_threshold = 10 
 }
 
-disk "/media/sda/" {
-  format = "SDA %avail"
+#disk "/media/sda/" {
+#  format = "SDA %avail"
 #  10 = 50Gb, I don't know why
-  low_threshold = 10
-}
+#  low_threshold = 10
+#}
 
 cpu_usage {
   format = "CPU %usage"	
