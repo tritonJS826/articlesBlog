@@ -2,6 +2,22 @@
 
 ## 2023
 
+* [AWS Network – Monitoring and Troubleshooting](./8187_3_2927402_1676841533_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Getting Started with AWS CloudFormation](./3627_3_2927402_1676843941_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [AWS Network Connectivity Options](./1754_3_2927402_1676804141_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Understanding AWS Networking Gateways](./1377_3_2927402_1676814498_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Amazon Elastic Container Service (ECS) Primer](./91_3_2927402_1676845264_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Differences Between Security Groups and NACLs](./4791_3_2927402_1676665990_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Configuring and Deploying VPCs with Multiple Subnets](./499_3_2927402_1676663916_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Introduction to Amazon API Gateway](./232_3_2927402_1676665189_AWS%20Course%20Completion%20Certificate.pdf)
+
 * [Subnets, Gateways, and Route Tables Explained](./206_3_2927402_1676651506_AWS%20Course%20Completion%20Certificate.pdf)
 
 * [Amazon RDS Service Primer](./287_3_2927402_1676625887_AWS%20Course%20Completion%20Certificate.pdf)
