@@ -1,0 +1,67 @@
+@startuml
+
+title Microfrontend initialising preparations
+
+participant Microfrontend order 10
+participant WebStorage order 20
+participant GlobalStorage order 30
+participant AnotherMicrofrontend order 40
+participant EventHub order 50
+participant BackRestAPI order 60
+participant BackWebSockets order 70
+
+group On init app (page) 
+EventHub -> BackWebSockets: subscribe if required
+note left: channel 5
+WebStorage -> EventHub: subscribe if required
+note left: channel 4 
+GlobalStorage -> EventHub: subscribe if required
+note left: channel 4
+AnotherMicrofrontend -> EventHub: subscribe if required
+note left: channel 4 
+end
+
+group Before component mount
+group subscribe for all events in system 
+Microfrontend -> EventHub: Subscribe
+note left: channel 4 
+Microfrontend -> BackWebSockets: Subscribe if required private subscribtion without event hub
+note left: channel 6 
+end
+
+group synchronously  get cached data if exist
+Microfrontend -> WebStorage: ?try to get cached data
+note left: channel 1 
+WebStorage -> Microfrontend: return cached data if exist
+note left: channel 1 
+Microfrontend -> GlobalStorage: ?try to get cahed data
+note left: channel 2 
+GlobalStorage -> Microfrontend: return cahced data if exist
+note left: channel 2 
+Microfrontend -> AnotherMicrofrontend: ?try to get cached data by SCI
+note left: channel 3 
+AnotherMicrofrontend -> Microfrontend: return chached data if exist
+note left: channel 3 
+end
+
+
+group if no cached data then get it and cache
+Microfrontend -> BackRestAPI:  get data
+note left: channel 7 
+BackRestAPI -> Microfrontend: return data 
+note left: channel 7 
+Microfrontend -> EventHub: publish event "data changed"
+note left: channel 4 
+EventHub -> WebStorage: ?notify that data changed and cache
+note left: channel 4 
+EventHub -> GlobalStorage: ?notify that data changed and cache
+note left: channel 4 
+EventHub -> AnotherMicrofrontend: ?notify that data chenged and cache
+note left: channel 4 
+end
+
+end
+
+note right of Microfrontend: now, after all preparations we can render microfrontend
+@enduml
+
