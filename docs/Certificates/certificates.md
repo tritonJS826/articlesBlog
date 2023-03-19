@@ -1,6 +1,35 @@
 # Certificates
 
 ## 2023
+* [Scaling Serverless Architecture](./12713_3_2927402_1676925325_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [AWS Well-Architected Consideration for Financial Services](./12692_3_2927402_1676909363_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [AWS Storage Gateway Deep Dive: Amazon S3 File Gateway](./12445_3_2927402_1677008343_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [AWS Storage Gateway Deep Dive: Volume Gateway](./12441_3_2927402_1676982871_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [AWS Backup Primer](./11646_3_2927402_1677045288_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Deep Dive: Amazon Elastic Block Store (Amazon EBS Cost Optimization](./10143_3_2927402_1676978618_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Introduction to Step Functions](./8819_3_2927402_1677010104_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Amazon Simple Storage Service (Amazon S3) Cost Optimization](./4983_3_2927402_1676971736_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [AWS Well-Architected](./2045_3_2927402_1676906562_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [AWS Foundations: Cost Management](./1955_3_2927402_1676968108_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Migration Evaluator Overview for Customers](./1646_3_2927402_1677041933_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [AWS Systems Manager](./456_3_2927402_1677060551_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Deep Dive with Security: AWS Identity and Access Management](./104_3_2927402_1677146964_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [AWS Lambda Foundations](./99_3_2927402_1676918606_AWS%20Course%20Completion%20Certificate.pdf)
+
+* [Introduction to Database Migration](./65_3_2927402_1676966125_AWS%20Course%20Completion%20Certificate.pdf)
 
 * [AWS Network – Monitoring and Troubleshooting](./8187_3_2927402_1676841533_AWS%20Course%20Completion%20Certificate.pdf)
 
