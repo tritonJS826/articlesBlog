@@ -3,6 +3,8 @@
 ## 2023
 * [Solution Architect Learning Plan Badge Assessment](./15000_3_2927402_1679494379_AWS%20Course%20Completion%20Certificate.pdf)
 
+* [***AWS Cloud Quest: Cloud Practitioner***](https://www.credly.com/badges/9ccbcfdc-44bf-47fa-97fd-b84d5d4cd3ec/public_url)
+
 * [Scaling Serverless Architecture](./12713_3_2927402_1676925325_AWS%20Course%20Completion%20Certificate.pdf)
 
 * [AWS Well-Architected Consideration for Financial Services](./12692_3_2927402_1676909363_AWS%20Course%20Completion%20Certificate.pdf)
