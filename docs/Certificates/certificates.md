@@ -1,6 +1,8 @@
 # Certificates
 
 ## 2023
+* [***AWS Learning: Technology architect***](https://www.credly.com/badges/34b2d658-339a-4e77-b1df-7aed2d65e747/public_url)
+
 * [Solution Architect Learning Plan Badge Assessment](./15000_3_2927402_1679494379_AWS%20Course%20Completion%20Certificate.pdf)
 
 * [***AWS Cloud Quest: Cloud Practitioner***](https://www.credly.com/badges/9ccbcfdc-44bf-47fa-97fd-b84d5d4cd3ec/public_url)
