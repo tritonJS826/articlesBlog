@@ -1,6 +1,8 @@
 # Certificates
 
 ## 2023
+* [***EF SET English level C1***](https://www.efset.org/cert/Kgyfci)
+
 * [***AWS Learning: Technology architect***](https://www.credly.com/badges/34b2d658-339a-4e77-b1df-7aed2d65e747/public_url)
 
 * [Solution Architect Learning Plan Badge Assessment](./15000_3_2927402_1679494379_AWS%20Course%20Completion%20Certificate.pdf)
