@@ -65,6 +65,9 @@
 * **scp**
   clone files by ssh
 
+* **shuf**
+  get few random lines 
+
 * **shutdown**
   switch off system
 
