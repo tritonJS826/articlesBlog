@@ -66,6 +66,7 @@ const sidebars = {
         'Other/configs/i3statusbar-config',
         'Other/configs/launch',
         'Other/configs/ququmber-vscode',
+        'Other/configs/bashrc',
       ],
     },
     'Other/backup-user/backup-user',
