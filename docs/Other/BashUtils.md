@@ -182,6 +182,14 @@ testdisk
 sudo mkfs.ext4 -m 0 -L <drivename> /dev/sda
 ```
 
+* mount drive
+```
+#check file system (for example ext4)
+blkid /dev/sda2
+sudo mount -t ext4 /dev/sda2 /media/sda
+
+```
+
 ## Archiving and backup
 
 * create bootable usb from image or deploy OS from image
@@ -295,6 +303,11 @@ git clean -df && git checkout .
 git gc --prune=now --aggressive
 ```
 
+* clear all untracked files (useful to clean files after changing .gitignore)
+```
+git rm -r --cached . && git add --all
+```
+
 ## System & monitoring
 
 * run command every 5 sec and show result
@@ -344,7 +357,7 @@ ps -aux
 tcptrack -i enp2s0
 ```
 
-* ssd health (see on field "percentage -- 100% mean that it's over")
+* ssd health (see on field "percentage used" -- 100% mean that it's over)
 or see on 177 - Wear_Leveling_Count - columns value and worst
 after this command wait a minute, sometime your system crashed after that,
 therefore it's required to reboot your comp
@@ -457,6 +470,11 @@ youtube-dl --ignore-errors --format bestaudio --extract-audio --audio-format mp3
 * download video from youtube
 ```
 youtube-dl -f best http://link-to-the-video  
+```
+
+* extract audio from video
+```
+ffmpeg -i video.mkv audio.mp3
 ```
 
 * get public ip info 
