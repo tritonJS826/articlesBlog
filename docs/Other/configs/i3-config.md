@@ -149,6 +149,16 @@ mode "exit: [l]ock, [e]logout, [r]eboot, [s]hutdown, s[u]spend, [d]m-tool switch
 }
 bindsym $mod+Shift+e mode "exit: [l]ock, [e]logout, [r]eboot, [s]hutdown, s[u]spend, [d]m-tool switch"
 
+# Keyboard friendly browser
+mode "browser: [m]ozilla(firefox), [c]hromium, [f]alkon, [g]oogle(chrome)" {
+  bindsym m exec firefox; mode "default"
+  bindsym c exec chromium; mode "default"
+  bindsym f exec falkon; mode "default"
+  bindsym g exec google-chrome; mode "default"
+  bindsym Escape mode "default"
+}
+bindsym $mod+b mode "browser: [m]ozilla(firefox), [c]hromium, [f]alkon, [g]oogle(chrome)"
+
 # сresize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -217,8 +227,6 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 # increase screen br
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 # decrease screen brightness
 
 #bind application to desktops
-bindsym $mod+b exec --no-startup-id chromium-browser; workspace 1;
-bindsym $mod+m exec --no-startup-id firefox; workspace 1;
 bindsym $mod+c exec --no-startup-id code; workspace 3;
 bindsym $mod+z exec --no-startup-id skypeforlinux; workspace 10;
 bindsym $mod+t exec --no-startup-id cool-retro-term;
