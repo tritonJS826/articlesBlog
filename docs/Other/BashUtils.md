@@ -47,6 +47,9 @@ find . -name "pattern" -exec du -sh {} \;
 find . -type d -name "pattern"
 ```
 
+## craete symbolic links
+ls -s new/path/file path/linkName
+
 ## Output formatting
 
 * print only 1 and 3 args from each line
@@ -370,6 +373,23 @@ sudo smartctl -t long -a /dev/sda
 sudo dmidecode --type 17 | grep peed
 ```
 
+* create/change swap file size
+```
+# To make swap permanent put line `swapfile swap swap defaults 0 0` to the file /etc/fstab
+
+# Disable existing swap, create a new swap file or partition or change swap size, format it and enable. If swap wasn't enabled to make it permanent you should put line `swapfile swap swap defaults 0 0` to the file/etc/fstab
+sudo swapoff -a
+sudo fallocate -l 4G /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+```
+
+* set battery charge level
+```
+echo 60 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold
+```
+
+
 ## User management
    
 * switch to another user with lightdm
@@ -475,6 +495,11 @@ youtube-dl -f best http://link-to-the-video
 * extract audio from video
 ```
 ffmpeg -i video.mkv audio.mp3
+```
+
+* Convert .mkv to .mp4
+```
+ffmpeg -i file.mkv -codec copy file.mp4
 ```
 
 * get public ip info 

@@ -6,4 +6,4 @@ ARCH LINIX (newest packages/software) -> manjaro
 Easy to use
 1. ubuntu/xubuntu/linux mint
 2. anti X
-3. monharo
+3. manjaro

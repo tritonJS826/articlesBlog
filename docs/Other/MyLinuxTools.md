@@ -115,6 +115,9 @@
 * **fdupes**
   find file duplicates
 
+* **ffmpeg**
+  format converter for images, audio and video
+
 * **git**
   version control system 
 
@@ -145,6 +148,9 @@
 * **neofetch**
   short OS and computer description
 
+* **ngrok**
+  tool for exposing local server (http, tcp)
+
 * **nmap**
   port scanning tool
 
@@ -172,6 +178,9 @@ fastest node package manager for multiple projects
 * **rclone**
   effective data cloning tool
 
+* **screenkey**
+  view pressed keys (useful for streams)
+
 * **sensors**
   sensors information
 
@@ -198,6 +207,12 @@ fastest node package manager for multiple projects
 
 * **testdisk**
   data recovery tool
+
+* **tmux**
+  terminal multiplexer
+
+* **tmate**
+  terminal multiplexer for collaborations/access sharing
 
 * **top**
   default system monitoring tool
