@@ -354,7 +354,12 @@ nvidia-smi
 #  snapshot of current process
 ps -aux
 ```
-
+* choose appropriate graphic card 
+```
+# useful for disabling discrete gpu (videocard) in laptops
+# use "query" to chech current setting
+sudo prime-select 
+```
 * show current network load by server
 ```
 tcptrack -i enp2s0
@@ -492,14 +497,20 @@ youtube-dl --ignore-errors --format bestaudio --extract-audio --audio-format mp3
 youtube-dl -f best http://link-to-the-video  
 ```
 
-* extract audio from video
+* extract audio from video, return first 1h32m
 ```
-ffmpeg -i video.mkv audio.mp3
+ffmpeg -ss 00:00:00 -to 01:32:30  -i video.mkv audio.mp3
 ```
 
 * Convert .mkv to .mp4
 ```
 ffmpeg -i file.mkv -codec copy file.mp4
+```
+
+* resize image base on current size
+```
+ffmpeg -i image.jpg -vf scale="iw/3:ih/3" outImage.jpg
+ffmpeg -i image.jpg -vf scale=1920:1680 outImage.jpg
 ```
 
 * get public ip info 
