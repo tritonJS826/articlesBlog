@@ -47,6 +47,13 @@ find . -name "pattern" -exec du -sh {} \;
 find . -type d -name "pattern"
 ```
 
+* execute command recursevely (convert all jpg files to webp and remove *.jpg files after that)
+```
+find . -type f -name \*.jpg -exec bash -c 'FN="{}"; ffmpeg -i "{}" "${FN%.jpg}.webp"' \;
+find . -type f -name \*.jpg -exec bash -c 'FN="{}"; rm "{}"' \;
+
+```
+
 ## craete symbolic links
 ls -s new/path/file path/linkName
 
@@ -283,7 +290,6 @@ bindsym $mod+x move workspace to output right
 
 * create patch file with untracked
 ```
-git add . && git diff --cached > file.patch && git reset
 ```
 
 * apply patch file with whitespaces
@@ -301,15 +307,31 @@ git remote prune origin
 git clean -df && git checkout .
 ```
 
-* run garbage collector to reduce size and increase performance
+* run garbage collector and repack to reduce size and increase performance
 ```
 git gc --prune=now --aggressive
+git repack -a -d --depth=250 --window=250
 ```
 
 * clear all untracked files (useful to clean files after changing .gitignore)
 ```
 git rm -r --cached . && git add --all
 ```
+
+* find all binary files with their size in history
+```
+git rev-list --objects --all | \
+git cat-file --batch-check='%(objecttype) %(rest)' | \
+grep '^blob' | \
+cut -d' ' -f2- | \
+grep -E '\.(exe|dll|bin|so|zip|tar|gz|jpg|png|pdf)$' | xargs du -sh | sort -h
+```
+
+* remove file from history by path
+```
+git filter-repo --path fileToRemove --invert-paths
+```
+
 
 ## System & monitoring
 
@@ -437,6 +459,11 @@ ab -n 1000 -c 50 https://some.url
 sysbench cpu --threads=100 run
 ```
 
+* stress test cpu
+```
+stress --cpu 8 --timeout 60
+```
+
 * test RAM (check 1024 Mb of memory 5 times)
 ```
 memtester 1024 5
@@ -471,6 +498,21 @@ gpg filename
 
 
 ## Other useful utils
+
+* control cpu frequency
+```
+sudo apt install cpupower-gui
+```
+
+* see cpu infp (frequency steps)
+```
+cpupower frequency-info
+```
+
+* set specific cpu frequency
+```
+cpupower frequency-set -f 1.7GHz
+```
 
 * show all listen ports and pids of appropriate processes
 ```
@@ -541,4 +583,10 @@ curl cheat.sh/rsync
 * weather
 ```
 curl wttr.in
+```
+* forward ports with
+```
+ssh -R 80:localhost:8080 localhost.run
+ssh -R 80:localhost:3000 serveo.net
+ngrok http 8000
 ```

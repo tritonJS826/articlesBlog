@@ -121,6 +121,9 @@
 * **git**
   version control system 
 
+* **gtypist**
+  touch typing tool
+
 * **hdparm**
   hard disk information
 
