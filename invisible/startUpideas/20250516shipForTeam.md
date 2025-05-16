@@ -1,0 +1,1 @@
+The idea is still pretty raw  but thats the point - it's a business productivity tool but it is maden with game-driven interface, for example the team list- is a 3d map on ship with different ship\business departments

@@ -118,6 +118,9 @@
 * **ffmpeg**
   format converter for images, audio and video
 
+* **fzf**
+  improved reverse-i-search for bash
+
 * **git**
   version control system 
 

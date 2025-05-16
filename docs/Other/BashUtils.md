@@ -52,10 +52,17 @@ find . -type d -name "pattern"
 find . -type f -name \*.jpg -exec bash -c 'FN="{}"; ffmpeg -i "{}" "${FN%.jpg}.webp"' \;
 find . -type f -name \*.jpg -exec bash -c 'FN="{}"; rm "{}"' \;
 
+# or to encode to av1
+find . -type f -name "*.mp4" -exec bash -c 'FN="{}"; ffmpeg -i "{}" -c:v libsvtav1 "${FN%.jpg}.av1.mp4"' \;
 ```
 
 ## craete symbolic links
 ls -s new/path/file path/linkName
+
+## Output redirection
+```
+command > output.log 2>&1
+```
 
 ## Output formatting
 
@@ -290,6 +297,7 @@ bindsym $mod+x move workspace to output right
 
 * create patch file with untracked
 ```
+git diff > file.patch
 ```
 
 * apply patch file with whitespaces
@@ -320,16 +328,12 @@ git rm -r --cached . && git add --all
 
 * find all binary files with their size in history
 ```
-git rev-list --objects --all | \
-git cat-file --batch-check='%(objecttype) %(rest)' | \
-grep '^blob' | \
-cut -d' ' -f2- | \
-grep -E '\.(exe|dll|bin|so|zip|tar|gz|jpg|png|pdf)$' | xargs du -sh | sort -h
+git rev-list --objects --all | git cat-file --batch-check='%(objecttype) %(rest)' | grep '^blob' | cut -d' ' -f2- | grep -E '\.(exe|dll|bin|so|zip|tar|gz|jpg|png|pdf)$' | xargs du -sh | sort -h
 ```
 
 * remove file from history by path
 ```
-git filter-repo --path fileToRemove --invert-paths
+git-filter-repo --path fileToRemove --invert-paths
 ```
 
 
@@ -417,6 +421,30 @@ echo 60 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold
 ```
 
 
+* set battery charge thresholds
+```
+sudo apt install tlp
+
+# Check what package needed for battery:
+sudo tlp-stat -b
+
+# Only if tlp-stat said that acpi_call is recommended:
+sudo apt install acpi-call-dkms
+# Only if tlp-stat said that tp-smapi-dkms is recommended:
+sudo apt install tp-smapi-dkms
+
+# Create a config file for TLP 
+sudo vim /etc/tlp.d/01-my-charge-thresh.conf
+# Insert the values you want:
+START_CHARGE_THRESH_BAT0=75
+STOP_CHARGE_THRESH_BAT0=80
+# Note that some thinkpads have multiple batteries (tlp-stat -b will tell you)
+# Restart tlp
+sudo systemctl restart tlp
+# Check the config status
+sudo tlp-stat -b
+
+
 ## User management
    
 * switch to another user with lightdm
@@ -446,6 +474,10 @@ echo 60 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold
 ```
     startx
 ```
+
+* (way 5) using RDP: client - remmina + server : xrdp
+```
+
 
 ## Benchmarking and testing
 
@@ -477,6 +509,8 @@ sudo hdparm -Tt /dev/nvme0n1
 ## Upgrade ubuntu to the next version
 ```
 sudo do-release-upgrade --allow-third-party
+# upgrade to unstable version
+sudo do-release-upgrade -d
 ```
 
 ## Security
@@ -519,6 +553,11 @@ cpupower frequency-set -f 1.7GHz
 sudo netstat -tulnp
 ```
 
+* kill port 8000
+```
+kill -9 $(lsof -t -i:8080)
+```
+
 * play music in console (all tracks from current directory with shuffle) 
 ```
 mplayer -shuffle *
@@ -549,10 +588,24 @@ ffmpeg -ss 00:00:00 -to 01:32:30  -i video.mkv audio.mp3
 ffmpeg -i file.mkv -codec copy file.mp4
 ```
 
+* Re-encode video (h.265:libx265, av1: libsvtav1), for better compression
+```
+ffmpeg -i input.mp4 -c:v libx265 -preset slow -crf 28 -c:a copy output.mp4
+ffmpeg -i input.mp4 -c:v libsvtav1 -c:a copy output.mp4
+```
+
 * resize image base on current size
 ```
 ffmpeg -i image.jpg -vf scale="iw/3:ih/3" outImage.jpg
 ffmpeg -i image.jpg -vf scale=1920:1680 outImage.jpg
+```
+
+* get media (video, image) information
+```
+ffprobe
+
+# from file where each line - path to media
+cat movies.txt | xargs -d '\n' -n 1 ffprobe
 ```
 
 * get public ip info 
@@ -569,6 +622,17 @@ nmap -A -O 1.1.1.1 -p 0-64000
 ```
 nmap 172.16.1.102 -p 22 --script ssh-brute --script-args userdb=users.txt,passdb=passwords.txt
 ```
+
+* install automatical webapp vulnerabilities scanner
+```
+sudo snap install zaproxy
+```
+
+* install msfconsole https://www.youtube.com/watch?v=YfI2wX7CBmM&list=PLI2KWmw0IyyLzxPY3HFEAq7fjINeMK_c1&index=10
+```
+sudo snap install metasploit-framework --edge
+```
+
 
 * check internet speed test
 ```
@@ -590,3 +654,62 @@ ssh -R 80:localhost:8080 localhost.run
 ssh -R 80:localhost:3000 serveo.net
 ngrok http 8000
 ```
+
+* split screen with 2 laptops (dual monitor through network)
+```
+barrier
+```
+
+
+* create free vpn (tailscale.com)
+```
+tailscale
+```
+
+* crack wifi hash from wifite (aircrack-ng) with wordlist
+```
+sudo wifite
+# stop monitor mode
+sudo airmon-ng stop wlp0s20f3mon
+```
+
+# crack hash with dictionary (after WAP handshake)
+sudo  aircrack-ng -w ../Documents/bigFiles/10-million-password-list-top-1000000.txt handshake_Mirkovic_F4-A4-54-81-34-10_2025-03-19T05-54-00.cap
+
+# crack hash with dictionary (after pmkid) (using GPU ~100x faster than CPU)
+hashcat hashFile dictoinary
+
+# crack hash with mask
+# -a3 use mask
+# -1 define custom mask
+# ?d?u?l?a create a custom charset with lowercase (?l), uppercase (?u), and digits (?d), lowercase & uppercase & special characters & numbers (?a)
+# ?1?1?1?1?1?1?1?1 eight characters longa
+
+# all eight character numbers
+hashcat hs/hash.cap -a3 -1 ?d ?1?1?1?1?1?1?1?1
+
+# full brute force (8 characters)
+hashcat hs/hash.cap -a3 ?a?a?a?a?a?a?a?a
+
+
+* ubunti installation on windows powershell
+``` 
+wsl --install -d Ubuntu
+```
+
+* remote access remmina + xrdp
+```
+# start xrdp server (restart|stop|enable|disable)
+sudo systemctl start xrdp
+```
+
+* remote file system
+```
+# mount remote filesystem
+sshfs user@host:/remote_dir /local_dir
+
+# remove mounted filesystem
+fusermount -u /local-dir
+```
+
+
