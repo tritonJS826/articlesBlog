@@ -148,6 +148,9 @@
 * **minikube**
   local kubernetes (useful for testing and learning)
 
+* **mise**
+  polyglot tool version manager (https://github.com/jdx/mise)
+
 * **mplayer**
   audio-video player
 
@@ -235,7 +238,7 @@ fastest node package manager for multiple projects
 * **wine**
   run windows programms
 
-* **youtube-dl**
+* **yt-dlp**
   download mp3/videos from youtube
 
 * **xrandr**
@@ -284,6 +287,9 @@ fastest node package manager for multiple projects
 
 * **libreoffice**
   office suit
+
+* **luris**
+  linux games (steam alternative)
 
 * **mousepad**
   text editor
