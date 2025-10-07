@@ -25,6 +25,8 @@ du -sh .[^.]*
 * show all sorted sizes of all files and folders
 ```
 du -sch .[!.]* * | sort -h
+# or
+du -sh $(ls -A)
 ```
 
 * find file duplicates in directory "target"
