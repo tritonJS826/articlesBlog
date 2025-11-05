@@ -393,6 +393,11 @@ sudo prime-select
 tcptrack -i enp2s0
 ```
 
+* show network consumption by process
+```
+sudo nethogs
+```
+
 * ssd health (see on field "percentage used" -- 100% mean that it's over)
 or see on 177 - Wear_Leveling_Count - columns value and worst
 after this command wait a minute, sometime your system crashed after that,
@@ -590,10 +595,15 @@ ffmpeg -ss 00:00:00 -to 01:32:30  -i video.mkv audio.mp3
 ffmpeg -i file.mkv -codec copy file.mp4
 ```
 
-* Re-encode video (h.265:libx265, av1: libsvtav1), for better compression
+* Re-encode video (h.265:libx265, av1: libsvtav1|libaom-av1), for better compression
 ```
 ffmpeg -i input.mp4 -c:v libx265 -preset slow -crf 28 -c:a copy output.mp4
-ffmpeg -i input.mp4 -c:v libsvtav1 -c:a copy output.mp4
+
+# this one does not work for me
+# ffmpeg -i input.mp4 -c:v libsvtav1 -c:a copy output.mp4
+
+ffmpeg -i input.mp4 -c:v libaom-av1 -crf 30 output.mkv
+
 ```
 
 * resize image base on current size
@@ -623,6 +633,8 @@ nmap -A -O 1.1.1.1 -p 0-64000
 * brute ssh with dictionaries
 ```
 nmap 172.16.1.102 -p 22 --script ssh-brute --script-args userdb=users.txt,passdb=passwords.txt
+# or with hydra in 3 threads (~20 passwords/second/thread ~= 60 passwords/second )
+hydra -l userName -P /home/triton/Documents/bigFiles/dict/testDict.txt -t 3 ssh://192.168.118.224
 ```
 
 * install automatical webapp vulnerabilities scanner
@@ -655,13 +667,13 @@ curl wttr.in
 ssh -R 80:localhost:8080 localhost.run
 ssh -R 80:localhost:3000 serveo.net
 ngrok http 8000
+tailscale funnel 8000
 ```
 
 * split screen with 2 laptops (dual monitor through network)
 ```
 barrier
 ```
-
 
 * create free vpn (tailscale.com)
 ```
@@ -693,8 +705,10 @@ hashcat hs/hash.cap -a3 -1 ?d ?1?1?1?1?1?1?1?1
 # full brute force (8 characters)
 hashcat hs/hash.cap -a3 ?a?a?a?a?a?a?a?a
 
+# convert .cap file to .22000 for hashcat
+hcxpcapngtool -o handshake.22000 capture.cap
 
-* ubunti installation on windows powershell
+* ubuntu installation on windows powershell
 ``` 
 wsl --install -d Ubuntu
 ```
@@ -714,4 +728,8 @@ sshfs user@host:/remote_dir /local_dir
 fusermount -u /local-dir
 ```
 
-
+# create disk in ram for super speed
+```
+sudo mkdir /mnt/ramdisk
+sudo mount -t tmpfs -o size=8G tmpfs /mnt/ramdisk
+```
