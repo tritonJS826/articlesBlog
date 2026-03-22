@@ -1,4 +1,9 @@
- {
+# Waybar Config 2026
+
+My [waybar](https://github.com/Alexays/Waybar) status bar configuration
+
+```
+{
     "layer": "top",
     "position": "top",
     "height": 30,
@@ -140,3 +145,6 @@
         }
     },
 }
+```
+
+2026-03-23

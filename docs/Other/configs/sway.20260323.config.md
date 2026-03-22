@@ -1,4 +1,9 @@
-# Default config for sway                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+# Sway Config 2026
+
+My [sway](https://swaywm.org/) window manager config
+
+```
+# Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
@@ -288,3 +293,7 @@ mode "mouse: h/j/k/l move | Space/Shift+Space=LMB/RMB (Ctrl=release) | u/d scrol
     # --- Exit mouse mode ---
     bindsym Escape mode "default"
     bindsym Return mode "default"
+}
+```
+
+2026-03-23

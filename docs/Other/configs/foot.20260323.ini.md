@@ -1,4 +1,9 @@
-[main]                                                                                                                                                                                                                                         
+# Foot Config 2026
+
+My [foot](https://codeberg.org/dnkl/foot) terminal emulator config
+
+```
+[main]
 font=monospace:size=18
 
 [colors-dark]
@@ -9,3 +14,6 @@ urgent=no
 
 [scrollback]
 lines=10000
+```
+
+2026-03-23

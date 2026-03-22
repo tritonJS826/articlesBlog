@@ -1,4 +1,8 @@
-#                                                                                                                                                                                              
+# Bashrc 2026
+
+My latest ~/.bashrc file
+
+```
 # ~/.bashrc
 #
 
@@ -30,3 +34,6 @@ export PATH=$PATH:$(go env GOPATH)/bin
 # bash history
 export HISTSIZE=50000
 export HISTFILESIZE=50000
+```
+
+2026-03-23

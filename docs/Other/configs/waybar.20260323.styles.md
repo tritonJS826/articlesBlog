@@ -1,3 +1,8 @@
+# Waybar Styles 2026
+
+My [waybar](https://github.com/Alexays/Waybar) CSS styles (Tokyo Night theme)
+
+```
 * {
     border: none;
     border-radius: 0;
@@ -111,3 +116,6 @@ window#waybar {
     background-color: #f7768e;
     color: #1a1b26;
 }
+```
+
+2026-03-23
