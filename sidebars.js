@@ -67,6 +67,12 @@ const sidebars = {
         'Other/configs/launch',
         'Other/configs/ququmber-vscode',
         'Other/configs/bashrc',
+        'Other/configs/bashrc.20260323',
+        'Other/configs/foot.20260323.ini',
+        'Other/configs/sway.20260323.config',
+        'Other/configs/waybar.20260323.styles',
+        'Other/configs/waybar.20260323.config',
+	
       ],
     },
     'Other/backup-user/backup-user',

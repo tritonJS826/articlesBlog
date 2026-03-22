@@ -54,6 +54,12 @@ find . -type d -name "pattern"
 find . -type f -name \*.jpg -exec bash -c 'FN="{}"; ffmpeg -i "{}" "${FN%.jpg}.webp"' \;
 find . -type f -name \*.jpg -exec bash -c 'FN="{}"; rm "{}"' \;
 
+
+* find command in history or files in current directory
+```
+https://github.com/junegunn/fzf
+```
+
 # or to encode to av1
 find . -type f -name "*.mp4" -exec bash -c 'FN="{}"; ffmpeg -i "{}" -c:v libsvtav1 "${FN%.jpg}.av1.mp4"' \;
 ```
@@ -365,7 +371,7 @@ vmstat -S m 5
 ```
 
 # short static overview
-neofetch 
+fasrfetch
 
 # big graphical software
 hardinfo
@@ -432,6 +438,16 @@ echo 60 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold
 ```
 sudo apt install tlp
 
+# full configuration here
+sudo vim /etc/tlp.conf
+# remove turbo boost
+# CPU_BOOST_ON_AC=1
+# CPU performance limitation (to prevent degradation) 
+# CPU_MAX_PERF_ON_AC=60
+# CPU_MAX_PERF_ON_BAT=40
+# enable config without rebooting
+sudo tlp start
+
 # Check what package needed for battery:
 sudo tlp-stat -b
 
@@ -484,7 +500,10 @@ sudo tlp-stat -b
 
 * (way 5) using RDP: client - remmina + server : xrdp
 ```
+sudo systemctl start xrdp
+# you can use tailscale for port forwarding
 
+```
 
 ## Benchmarking and testing
 
@@ -501,6 +520,11 @@ sysbench cpu --threads=100 run
 * stress test cpu
 ```
 stress --cpu 8 --timeout 60
+```
+
+* stress test cpu with terminal monitor (very easy to see for all cores and make a picture of this charts and compare it)
+```
+s-tui
 ```
 
 * test RAM (check 1024 Mb of memory 5 times)
@@ -545,7 +569,7 @@ gpg filename
 sudo apt install cpupower-gui
 ```
 
-* see cpu infp (frequency steps)
+* see cpu info (frequency steps)
 ```
 cpupower frequency-info
 ```
@@ -580,9 +604,10 @@ mplayer -playlist playlist.txt -shuffle
 youtube-dl --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K --output "%(title)s.%(ext)s" http://link-to-the-video
 ```
 
-* download video from youtube
+* download video from youtube and other resources
 ```
-youtube-dl -f best http://link-to-the-video  
+yt-dlp http://link-to-video
+# deprecated youtube-dl -f best http://link-to-the-video  
 ```
 
 * extract audio from video, return first 1h32m
@@ -732,4 +757,20 @@ fusermount -u /local-dir
 ```
 sudo mkdir /mnt/ramdisk
 sudo mount -t tmpfs -o size=8G tmpfs /mnt/ramdisk
+```
+
+
+# check for viruses (root kit)
+```
+sudo rkhunter -c
+```
+
+# guiat tuner
+```
+lingot
+```
+
+# edit pdf
+```
+xournalpp
 ```
