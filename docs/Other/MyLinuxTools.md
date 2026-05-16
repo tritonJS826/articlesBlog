@@ -136,6 +136,9 @@
 * **kubectl**
   standard kubernetes command line tool
 
+* **lazydocker**
+  handy docker container management tool
+
 * **k9s**
   handy kubernetes monitoring and maintening tool
 
@@ -166,6 +169,9 @@
 * **node**
   server platform to execute js
 
+* **nchat**
+  terminal-based matrix client
+
 * **npm**
   standard node package manager
 
@@ -173,7 +179,10 @@
   nvidia gpu info
 
 * **pnpm**
-fastest node package manager for multiple projects
+ fastest node package manager for multiple projects
+
+* **pipe-viewer**
+  youtube-dl frontend for terminal
 
 * **prime-select**
   switch between audiocards
@@ -185,7 +194,10 @@ fastest node package manager for multiple projects
   easy effective data cloning tool
 
 * **rclone**
-  effective data cloning tool
+  effective cloud storage sync tool
+
+* **rtorrent**
+  terminal bittorrent client
 
 * **screenkey**
   view pressed keys (useful for streams)

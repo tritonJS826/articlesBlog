@@ -53,7 +53,8 @@ find . -type d -name "pattern"
 ```
 find . -type f -name \*.jpg -exec bash -c 'FN="{}"; ffmpeg -i "{}" "${FN%.jpg}.webp"' \;
 find . -type f -name \*.jpg -exec bash -c 'FN="{}"; rm "{}"' \;
-
+# from mp3 to opus - for music archive
+find . -name "*.mp3" -print0 | xargs -0 -P "$(nproc)" -I {} bash -c 'ffmpeg -y -i "$1" -c:a libopus -b:a 96k -vbr on -compression_level 10 "${1%.mp3}.opus"' _ {}
 
 * find command in history or files in current directory
 ```
@@ -433,7 +434,6 @@ sudo swapon /swapfile
 echo 60 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold
 ```
 
-
 * set battery charge thresholds
 ```
 sudo apt install tlp
@@ -609,6 +609,12 @@ youtube-dl --ignore-errors --format bestaudio --extract-audio --audio-format mp3
 yt-dlp http://link-to-video
 # deprecated youtube-dl -f best http://link-to-the-video  
 ```
+* find and watch youtube video
+```
+pipe-viewer
+pipe-viewer -a #audio only
+pipe-viewer --720p
+```
 
 * extract audio from video, return first 1h32m
 ```
@@ -773,4 +779,28 @@ lingot
 # edit pdf
 ```
 xournalpp
+```
+
+# vpn
+```
+proton-vpn-cli
+```
+
+# linux passwords (keyring, ssh, etc.)
+```
+seahorse
+```
+
+# zram 
+```
+modprobe zram
+echo 20G /sys/block/zram0/disksize
+mkswap /dev/zram0 
+swapon /dev/zram0 -p 100
+```
+
+
+# cli torrent 
+```
+rtorrent
 ```
