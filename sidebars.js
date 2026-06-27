@@ -85,7 +85,8 @@ const sidebars = {
     'Other/lifeCheating/Life-cheating',
     'Other/BashUtils',
     'Other/how-to-become-frontend-engineer-lessons-plan',
-    'Other/SoftSkills'
+    'Other/SoftSkills',
+    'Other/MastersWayIdea'
   ],
   ['Certificates']: [
     'Certificates/certificates',

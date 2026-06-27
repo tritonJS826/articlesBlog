@@ -804,3 +804,6 @@ swapon /dev/zram0 -p 100
 ```
 rtorrent
 ```
+
+
+# type with just voice locally
